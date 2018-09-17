@@ -8,7 +8,7 @@
 
 overlay.addEventListener("mouseover", function(){
   text.style.display="block";
-  text.style.color = "black";
+  text.style.color = "white";
   text.style.opacity = "1.0";
 
 })
@@ -18,7 +18,7 @@ overlay.addEventListener("mouseout", function(){
 
 overlay2.addEventListener("mouseover", function(){
   text2.style.display="block";
-  text2.style.color = "black";
+  text2.style.color = "white";
   text2.style.opacity = "1.0";
 
 })
@@ -27,7 +27,7 @@ overlay2.addEventListener("mouseout", function(){
 })
 overlay3.addEventListener("mouseover", function(){
   text3.style.display="block";
-  text3.style.color = "black";
+  text3.style.color = "white";
   text3.style.opacity = "1.0";
 
 })
