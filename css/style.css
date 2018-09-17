@@ -41,7 +41,7 @@ nav a:hover{
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
   overflow: hidden;
-  right: 3%;
+
 }
 
 .profile-pic{
@@ -66,7 +66,7 @@ nav a:hover{
   position: relative;
   float: left;
   padding: 6px 5px 5px 25px;
-  left: 2%;
+  
 }
 
 .img-work{
