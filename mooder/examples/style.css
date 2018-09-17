@@ -1,0 +1,513 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size:100%;
+  overflow:hidden;
+}
+
+/* Display the page when targeted */
+.page:target {
+  position: absolute;
+  display: block;
+  animation-duration: 0.5s;
+}
+
+.page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%; /* so background does not show with animation */
+  width: 100%;
+  color:#333;
+  display:none;
+}
+
+#navigation {
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:1;
+  font-size:1.5em;
+}
+
+li {
+  list-style-type:none;
+}
+
+#navigation a {
+  width:1in;
+  padding:16px;
+  margin-bottom:-6px;
+  color:white;
+  text-decoration: none;
+  display:inline-block;
+}
+
+#navigation a:hover {
+  color: #7FFFD4;
+}
+#webgl{
+  position: fixed;
+  top: 17.5%;
+  left: 60%;
+}
+#border{
+  border-color: #8be8e3;
+  position: absolute;
+  left: 1200px;
+  top: 180px;
+}
+
+#canvas{
+  height: 300px;
+  width: 900px;
+  margin-left:20%;
+}
+#bar{
+  position: fixed;
+  height: 380px;
+  top: 34%;
+  left: 3%;
+}
+#sadOverlay{
+position: relative;
+display: none;
+z-index: 5;
+top: 0px;
+left: 0px;
+}
+#breath{
+  display: none;
+  position: fixed;
+  top: 30%;
+  right: 19%;
+}
+#slowly{
+  position: fixed;
+  width: 400px;
+  top: 20%;
+  right: 310px;
+  font-weight: 700;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 17pt;
+  display: none;
+}
+#in{
+  position: fixed;
+  top: 43%;
+  right: 17%;
+  font-family: 'Nothing You Could Do', cursive;
+  font-weight: 700;
+  color: black;
+}
+
+
+.orb {
+  height: 100px;
+  width: 100px;
+  border-radius: 200px;
+  background: white;
+  /**font-weight: 700px;**/
+  color: black;
+}
+
+.orb_1 {
+  animation-name:orb_1;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+  animation-iteration-count:infinite;
+	animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes orb_1 {
+  from { transform: scale(1); background: #14baa3;}
+	   to { transform: scale(3); background: #e2fffb;}
+}
+
+
+#navigation{
+  color: white;
+  font-size: 15pt;
+  position: fixed;
+  top:30%;
+  left: 7%;
+
+}
+#navigation ul{
+  margin-top: 13px;
+}
+#navigation li{
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+#header{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 70%;
+
+}
+
+#page1{
+ background-color: #F25757;
+
+}
+
+#page2{
+  background-color: #ebb3a9;
+}
+#page3{
+  /**background-color: #e87ea1;**/
+  /**background-color: #d17fc0;**/
+  background-color: #c17fb4;
+}
+#page4{
+  background-color: #8acebc;
+}
+
+#page2 h1{
+  font-size: 25pt;
+  color: black;
+
+}
+#about{
+  animation-name: about;
+  animation-duration: 1s;
+}
+@keyframes about{
+  from{transform: translate(-30px)}
+    to{transform: translate(0px)}
+}
+.page2h2{
+  font-size: 17pt;
+  color: black;
+  font-weight: 700;
+  margin-left: 30%;
+  margin-top: 2%;
+  text-decoration: line-through;
+}
+#page2 h1{
+  font-size: 34pt;
+  font-weight: 700;
+  color: #7FFFD4;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+#aboutHR{
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 27%;
+  margin-left: 30%;
+  margin-bottom: 2px;
+  margin-top: -15px;
+}
+.page2p{
+  margin-left: 30%;
+  font-weight: 500;
+  margin-top: .5%;
+  width: 50%;
+  font-size: 12pt;
+  line-height: 20px;
+}
+.page2h2:hover{
+text-decoration: none;
+}
+#page2 h3{
+  margin-left: 30%;
+  font-size:13pt;
+  font-weight: 600;
+color: black;
+margin-top: 1%;
+}
+#email{
+  font-weight: 600;
+  font-size: 50pt;
+}
+#page3hr{
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 27%;
+  margin-left: 21%;
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+#seeyourself{
+  color: #7FFFD4;
+  margin-left: 21%;
+font-size: 32pt;
+  font-weight: 700;
+}
+#inthefilters{
+  margin-left: 35%;
+  font-size: 20pt;
+  font-weight: 700;
+  font-family: 'Nothing You Could Do', cursive;
+  margin-top: 0px;
+  margin-bottom: 5%;
+}
+#mooder{
+  animation-name: mooder;
+  animation-duration: 1s;
+}
+@keyframes mooder {
+  from{transform: translate(-30px)}
+    to{transform: translate(0px)}
+}
+#contactme{
+  animation-name: contactme;
+  animation-duration: 1s;
+}
+@keyframes contactme {
+  from{transform: translate(-50px)}
+    to{transform: translate(0px)}
+}
+
+
+#webcamHeading{
+  margin-top: 1%;
+  transition: 5s;
+  animation-name: moveHeading;
+  animation-duration: 1s;
+}
+@keyframes moveHeading {
+  from{transform: translate(-30px)}
+    to{transform: translate(0px)}
+}
+#page4 h1{
+  font-size: 25pt;
+  color: white;
+}
+
+#overlay {
+  filter : hue-rotate(90deg); /*IE*/
+position: fixed;
+left: 60%;
+top: 150px;
+}
+#space{
+  margin-left: 20px;
+}
+#doyoufeel{
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18pt;
+  font-weight: bold;
+  padding-left: 8px;
+  left: 185px;
+}
+.button1 {
+  position: relative;
+  left: 175px;
+    background-color: #7FFFD4;
+    border: none;
+    border-radius: 10%;
+    color: black;
+    padding: 0px 0px 0px 0px;
+    text-decoration: none;
+    margin: 4px 10px;
+    width:84px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 6;
+}
+#otherbutton{
+  position: relative;
+bottom: 100px;
+  left: 1000px;
+background-color: #fcf8c2;
+border: none;
+border-radius: 50%;
+color: black;
+padding: 0px 0px 0px 0px;
+text-decoration: none;
+margin: 4px 10px;
+width:72px;
+height: 72px;
+cursor: pointer;
+text-align: center;
+  z-index: 6;
+  font-weight: 600;
+}
+#watch{
+  position: relative;
+  bottom: 100px;
+  left: 950px;
+  font-size: 17pt;
+  font-weight: 600;
+}
+input[type=button]:hover{
+  background-color: white;
+}
+#container {
+  margin: 1% 0 0 7%;
+}
+
+#videoel{
+  margin-left: 21%;
+  position: fixed;
+  top: 17.5%;
+  left: 0%;
+}
+
+#content {
+  margin-left: 7%;
+  margin-top: 3%;
+  width: 93%;
+}
+.btn {
+  font-size: 16px;
+}
+
+#controls {
+  position: fixed;
+  top: 75%;
+  left: 20%;
+}
+#startbutton, #sadFilter, #hueFilter, #clear, #fullscreen {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+#emotion_container {
+  position: fixed;
+  top: 74.2%;
+  right: 20%;
+}
+
+
+#emotion_icons {
+
+  height: 50px;
+  padding-left: 40px;
+}
+
+.emotion_icon {
+  position: fixed;
+  width : 80px;
+  height : 80px;
+}
+
+#emotion_chart, #emotion_icons {
+  width : 40%;
+  color: white;
+}
+#emotion_chart{
+  display: none;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6 {
+  visibility : hidden;
+}
+#header p{
+  font-size: 12pt;
+  font-weight: 700;
+  margin-left: 41%;
+  margin-right: 10%;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  line-height: 18px;
+  color: black;
+}
+
+#header h1{
+  color: #68D0FF;
+  font-size: 55pt;
+  font-weight: 700;
+  margin-left: 41%;
+}
+#moodText{
+  font-size: 19pt;
+  font-weight: 700;
+  display: none;
+}
+#mooderhr10{
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 45%;
+  margin-left: 41%;
+  margin-top: -23px;
+
+}
+input[type=text]{
+  width: 1000px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: white;
+
+}
+#contact{
+  position: absolute;
+top: 20%;
+right: 45%;
+transform: translate(-45%, -20%);
+}
+#contact h1{
+  font-size: 30pt;
+  font-weight: 700;
+  color: black;
+}
+#contact p{
+  font-size: 15pt;
+}
+#social{
+  margin-top: 50px;
+}
+#social img{
+  margin-right: 30px;
+}
+#contact p{
+  margin-top: 10px;
+}
+.button{
+  background-color: white; /* Green */
+color: black;
+padding: 10px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+border-radius: 10px;
+margin-top: 15px;
+}
+.button:hover{
+    background-color: #7FFFD4;
+}
+form{
+  position: absolute;
+top: 52%;
+left: 34.5%;
+transform: translate(-2%, -50%);
+}
+form{
+font-size: 15pt;
+}
+
+footer {
+  padding: 8px 0px 8px 0px;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 5%;
+  bottom: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer li {
+  float: left;
+  padding-left: 17%;
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Online Font Link -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+  <!--add link to p5 here-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+  <!-- facial recognition library -->
+  <script src="https://cdn.jsdelivr.net/npm/clmtrackr@1.1.2/build/clmtrackr.min.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/utils.js"></script>
+  <script src="../build/clmtrackr.js"></script>
+  <script src="../models/model_pca_20_svm.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/Stats.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/d3.min.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/emotion_classifier.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/emotionmodel.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/webgl-utils.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/face_deformer.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/dat.gui.min.js"></script>
+  <script src="./js/libs/webgl-utils.js"></script>
+  <script src="../build/clmtrackr.js"></script>
+  <script src="../models/model_pca_20_svm.js"></script>
+  <script type="text/javascript">
+    alert("Turn on the camera and the preferred viewport is 1440x826 :)");
+</script>
+
+  <title>Mooder</title>
+</head>
+
+<body>
+  <nav id="navigation">
+    <div id="bar">
+      <img src="media/bar.png" alt="navigationBar" width="50" height="235">
+    </div>
+    <ul>
+      <li><a href="#page1">home</a></li>
+      <li><a href="#page3">interact</a></li>
+      <li><a href="#page2">about</a></li>
+      <li><a href="#page4">contact</a></li>
+    </ul>
+  </nav>
+
+  <article class="page" id="page1">
+
+    <div id="canvas"></div>
+    <header id="header">
+      <h1 id="mooder">Mooder</h1>
+      <hr id="mooderhr10">
+      <p>A mood filter website that treats people with stress and helps them feel better about themselves. This project targets mental health and helps prevent stress disorders.</p>
+      <p>ELLE LUO <br> DESIGNER | ARTIST | DEVELOPER</p>
+    </header>
+  </article>
+
+  <div id="screenSize">
+    <article class="page" id="page3">
+      <div id="webcamHeading">
+        <h1 id="seeyourself">See Yourself</h1>
+        <hr id="page3hr">
+        <h1 id="inthefilters">in the filters</h1>
+      </div>
+      <div id="container">
+        <video id="videoel" width="450" height="400" preload="auto" loop playsinline autoplay>
+    </video>
+        <canvas id="overlay" width="450" height="400"></canvas>
+        <canvas id="webgl" width="450" height="400"></canvas>
+
+      </div>
+      <canvas id="border" width="450" height="400"></canvas>
+      <div id="emotion_container">
+        <p id="moodText">Current Mood </p>
+        <p> </p>
+        <div id="emotion_icons">
+          <img class="emotion_icon" alt="emotion_icon" id="icon1" src="./media/icon_angry.png">
+          <img class="emotion_icon" alt="emotion_icon" id="icon2" src="./media/icon_sad.png">
+          <img class="emotion_icon" alt="emotion_icon" id="icon3" src="./media/icon_surprised.png">
+          <img class="emotion_icon" alt="emotion_icon" id="icon4" src="./media/icon_happy.png">
+        </div>
+        <div id='emotion_chart'></div>
+      </div>
+
+      <div id="controls" class="w3-animate-opacity">
+
+          <p id="doyoufeel">DO YOU FEEL?</p>
+        <input class="button1" type="button" value="SAD" id="sadFilter">
+        <input class="button1" type="button" value="ANXIOUS" id="hueFilter">
+        <p id="slowly">Breath Slowly...</p>
+        <div class="orb orb_1" id="breath">
+          <p id="in">In & Out</p>
+        </div>
+
+        <div id="watchyour">
+        <p id="watch">WATCH YOUR</p>
+        <input id="otherbutton" type="button" value="MOOD" onclick="startVideo()" id="startbutton">
+      </div>
+
+        <section id="sadOverlay">
+          <img src="media/sad.svg" alt="sad" width="1100" height="800">
+        </section>
+
+        <!--<input class="otherbutton" type="button" value="CLEAR" id="clear">-->
+        <!--<input class="otherbutton" type="button" value="FULL" id="fullscreen">-->
+      </div>
+
+    </article>
+  </div>
+
+  <article class="page" id="page2">
+    <div id="about">
+      <h1>About</h1>
+      <hr id="aboutHR">
+    </div>
+    <div class="w3-animate-opacity">
+      <h2 class="page2h2">Why i do this?</h2>
+      <p class="page2p">We presented Mooder, a mood filter website that treat people with stress and help them feel better about themselves. This project targets mental health and provide an entertaining filter platform for people who experience stress.
+        <p>
+          <h2 class="page2h2">How to use it?</h2>
+          <p class="page2p">Each button represents different filter feature. Down below is the instruction of how to use the filters.</p>
+          <h2 class="page2h2">Filter features <3</h2>
+          <h3>MOOD filter</h3>
+          <p class="page2p">Detecting your current mood based on current facial expression.</p>
+          <h3>SAD filter</h3>
+          <p class="page2p">Many people mentioned that when they feel sad the encouragement from others can make them feel better. For this reason, I created this sad filter to encourage people and cheer them up whenever they are feeling down.</p>
+          <h3>ANXIOUS filter</h3>
+          <p class="page2p">I create this filter to help people deal with stress, anxiety, and negative emotions. I made this breathing ball animation to help them cool down when their temper flares and sharpen their concentration skills. This filter can be utilized as
+            a helper for breathing meditation or as many other meditative implements.</p>
+
+          <!--
+          <h3>FULL</h3>
+          <p class="page2p">This button is to expand the screen size to full screen.</p>
+        -->
+    </div>
+  </article>
+
+
+
+
+  <article class="page" id="page4">
+    <div id="contact">
+      <div id="contactme">
+      <h1>CONTACT ME</h1>
+      <p>All Questions About Elle Luo</p>
+      <p id="email">Email: elluo@ucdavis.edu</p>
+    </div>
+    <!--
+      <div id="social">
+        <a href="#"><img src="media/twitter.png" alt="twitter" width="66" height="54"></a>
+        <a href="#"><img src="media/instagram.png" alt="insta" width="66" height="66"></a>
+        <a href="#"><img src="media/facebook.png" alt="facebook" width="55" height="55"></a>
+      </div>
+    -->
+    </div>
+    <!--
+    <form action="mailto:elluo@ucdavis.edu" method="post" enctype="text/plain">
+      Drop me a line :)<br>
+      <input type="text" name="block"><br>
+      <input class="button" type="submit" value="Submit">
+    </form>-->
+  </article>
+<!--
+  <footer>
+    <ul>
+      <li><a href="https://validator.w3.org/check?uri=referer">Valid HTML 5\</a></li>
+      <li><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS\</a></li>
+    </ul>
+  </footer>
+-->
+  <script src="script.js"></script>
+  <script src="utility.js"></script>
+
+</body>
+
+</html>
