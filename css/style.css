@@ -317,6 +317,14 @@ h3{
     float: right;
     overflow: hidden;
   }
+  #elleluo{
+    font-size: 50px;
+    color: #C676CC;
+
+    text-decoration: underline;
+    text-decoration-color: #1DDFD6;
+  }
+
   .about{
     width: 90%;
     float: right;
