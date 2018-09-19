@@ -7,7 +7,21 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
+#top{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+#is{
+  font-size: 15px;
+  font-weight: 500;
+}
+#elleluo{
+  font-size: 50px;
+  color: #C676CC;
 
+  text-decoration: underline;
+  text-decoration-color: #1DDFD6;
+}
 nav{
   display: block;
   width: 300px;
@@ -41,9 +55,11 @@ nav a:hover{
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
   overflow: hidden;
-
+  font-family: 'Work Sans', sans-serif;
 }
-
+#font{
+  color: black;
+}
 .profile-pic{
   width: 100%;
   border-radius: 125px;
@@ -83,7 +99,7 @@ nav a:hover{
 .col-1{
   display: block;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 0%;
 }
 .col-2{
 float: left;
