@@ -57,7 +57,7 @@ nav a:hover{
   overflow: hidden;
   font-family: 'Work Sans', sans-serif;
 }
-#font{
+.font{
   color: black;
 }
 .profile-pic{
@@ -157,7 +157,15 @@ h3{
   position: relative;
   left: 15%;
 }
-
+.img-scentery{
+  width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+hr{
+  border-color: black;
+}
 .scentery{
     position: absolute;
     font-size: 30px;
