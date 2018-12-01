@@ -89,18 +89,10 @@ nav a:hover{
   color: black;
 }
 .profile-pic{
-  width: 100%;
+  width: 30%;
   border-radius: 125px;
   width: 100%;
-  max-width: 250px;
-  height: auto;
-}
-
-.profile-pic{
-  width: 100%;
-  border-radius: 125px;
-  width: 100%;
-  max-width: 250px;
+  max-width: 160px;
   height: auto;
 }
 
@@ -130,9 +122,9 @@ nav a:hover{
   margin-top: 0%;
 }
 .col-2{
-float: left;
-  margin-top: 10%;
-  margin-left: 25%;
+  float: left;
+  margin-top: 8%;
+  margin-left: 13%;
 }
 
 
@@ -151,10 +143,10 @@ float: left;
 }
 
 .about{
-  width: 35%;
+  width: 60%;
   float: right;
-  margin-top: 10%;
-  margin-right: 15%;
+  margin-top: 1%;
+  margin-right: 13%;
 }
 
 p{
