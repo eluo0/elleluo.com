@@ -413,13 +413,16 @@
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
 
 	/* Page Container */
 	.container {
 	    width: 280px;
 	    min-width: 280px;
 	    max-width: 280px;
+	}
+	#about1{
+		margin-left: -8%;
 	}
 
 }
